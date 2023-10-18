@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mneri <mneri@student.42.fr>                +#+  +:+       +#+        */
+/*   By: teo <teo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 13:33:37 by mneri             #+#    #+#             */
-/*   Updated: 2023/10/10 15:25:29 by mneri            ###   ########.fr       */
+/*   Updated: 2023/10/18 14:25:20 by teo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Fixed
 		Fixed(void);
 		Fixed(const Fixed &fixed);
 		Fixed &operator=(const Fixed &fixed);
-		Fixed(const int fixed);
-		Fixed(const float frac);
+		Fixed( int fixed);
+		Fixed( float frac);
 		~Fixed(void);
 
 		float	toFloat( void ) const;

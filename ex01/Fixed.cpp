@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mneri <mneri@student.42.fr>                +#+  +:+       +#+        */
+/*   By: teo <teo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 13:33:30 by mneri             #+#    #+#             */
-/*   Updated: 2023/10/11 14:47:18 by mneri            ###   ########.fr       */
+/*   Updated: 2023/10/18 14:29:10 by teo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,15 @@ Fixed &Fixed::operator=(const Fixed &fixed)
 	return *this;
 }
 
-Fixed::Fixed(const int fixed)
+Fixed::Fixed( int fixed)
 {
 	fix_num = fixed << Fixed::bits;
 	std::cout << "Int constructor called" << std::endl;
 }
 
-Fixed::Fixed(const float fixed)
+Fixed::Fixed( float fixed)
 {
-	fix_num = (fixed * (1 << Fixed::bits));
+	fix_num = (int)roundf(fixed * (1 << this->bits));
 	std::cout << "Float constructor called" << std::endl;
 }
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mneri <mneri@student.42.fr>                +#+  +:+       +#+        */
+/*   By: teo <teo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 13:33:30 by mneri             #+#    #+#             */
-/*   Updated: 2023/10/13 15:31:45 by mneri            ###   ########.fr       */
+/*   Updated: 2023/10/18 14:30:04 by teo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,10 @@ Fixed::Fixed(const int fixed)
 	// std::cout << "Int constructor called" << std::endl;
 }
 
-Fixed::Fixed(const float fixed)
+Fixed::Fixed( float fixed)
 {
-	fix_num = (fixed * (1 << Fixed::bits));
-	// std::cout << "Float constructor called" << std::endl;
+	fix_num = (int)roundf(fixed * (1 << this->bits));
+	std::cout << "Float constructor called" << std::endl;
 }
 
 int Fixed::getRawBits(void) const
