@@ -6,7 +6,7 @@
 /*   By: mneri <mneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 13:30:28 by mneri             #+#    #+#             */
-/*   Updated: 2023/10/13 15:39:31 by mneri            ###   ########.fr       */
+/*   Updated: 2023/10/19 15:36:16 by mneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 int main()
 {
 	Point a(0, 0);
-	Point b(10 , 30);
-	Point c(20, 0);
-	Point point(10 , 15);
+	Point b(4 , 0);
+	Point c(2, 3);
+	Point point(1 , 1);
 	bool check = bsp(a, b, c, point);
 	if(check == true)
 		std::cout << "Inside" << std::endl;
