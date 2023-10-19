@@ -6,7 +6,7 @@
 /*   By: mneri <mneri@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 13:33:30 by mneri             #+#    #+#             */
-/*   Updated: 2023/10/19 13:44:11 by mneri            ###   ########.fr       */
+/*   Updated: 2023/10/19 15:43:29 by mneri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,10 @@ Fixed::Fixed(const int fixed)
 	// std::cout << "Int constructor called" << std::endl;
 }
 
-Fixed::Fixed(const float fixed)
+Fixed::Fixed( float fixed)
 {
 	fix_num = (int)roundf(fixed * (1 << this->bits));
-	// std::cout << "Float constructor called" << std::endl;
+	std::cout << "Float constructor called" << std::endl;
 }
 
 int Fixed::getRawBits(void) const
